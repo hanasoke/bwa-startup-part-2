@@ -23,10 +23,10 @@ func main() {
 
 	userRepository.Save(user)
 
-}
+	// Input dari user
+	// handler, input dari user -> struct input
+	// service : melakukan mapping dari struct input ke struct User
+	// repository
+	// db
 
-// Input
-// handler
-// service
-// repository
-// db
+}
