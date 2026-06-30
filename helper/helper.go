@@ -11,6 +11,17 @@ type meta struct {
 	status  string
 }
 
-func APIResponse(message string, code int, status string, data interface{}) {
+func APIResponse(message string, code int, status string, data interface{}) response {
+	meta := meta{
+		message: message,
+		code:    code,
+		status:  status,
+	}
 
+	response := response{
+		meta: meta,
+		data: data,
+	}
+
+	return response
 }
