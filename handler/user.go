@@ -26,6 +26,7 @@ func (h *userHandler) RegisterUser(c *gin.Context) {
 	err := c.ShouldBindJSON(&input)
 	if err != nil {
 		c.JSON(http.StatusBadRequest, nil)
+		return
 	}
 
 	newUser, err := h.userService.RegisterUser(input)
