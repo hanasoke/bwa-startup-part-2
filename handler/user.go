@@ -30,7 +30,7 @@ func (h *userHandler) RegisterUser(c *gin.Context) {
 
 	newUser, err := h.userService.RegisterUser(input)
 
-	if err != nil {
+	if true {
 		c.JSON(http.StatusBadRequest, nil)
 	}
 
