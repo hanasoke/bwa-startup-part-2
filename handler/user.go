@@ -32,6 +32,7 @@ func (h *userHandler) RegisterUser(c *gin.Context) {
 
 	if true {
 		c.JSON(http.StatusBadRequest, nil)
+		return
 	}
 
 	// token, err := h.jwtService.GenerateToken()
