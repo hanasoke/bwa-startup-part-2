@@ -51,13 +51,6 @@ func (h *userHandler) RegisterUser(c *gin.Context) {
 }
 
 func (h *userHandler) Login(c *gin.Context) {
-	// user memasukkan input (email * password)
-	// input ditangkap handler
-	// mapping dari input user ke input struct
-	// input struct passing ke service
-	// di service mencari dg bantuan repository user dengan email x
-	// mencocokkan password
-
 	var input user.LoginInput
 
 	err := c.ShouldBindJSON(&input)
@@ -85,5 +78,14 @@ func (h *userHandler) Login(c *gin.Context) {
 	response := helper.APIResponse("Successfully loggedin", http.StatusOK, "success", formatter)
 
 	c.JSON(http.StatusOK, response)
+
+}
+
+func CheckEmailAvailability(c *gin.Context) {
+	// ada input email dari user
+	// input email di-mapping ke struct input
+	// struct input di-passing ke service
+	// service akan manggil repository - email sudah ada atau belum
+	// repository - db
 
 }
