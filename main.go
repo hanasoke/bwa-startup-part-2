@@ -38,7 +38,7 @@ func main() {
 	input.GoalAmount = 100000000
 	input.Perks = "hadiah satu, dua, dan tiga"
 
-	inputUser, _ := userService.GetUserByID(1)
+	inputUser, _ := userService.GetUserByID(22)
 
 	input.User = inputUser
 
